@@ -1,0 +1,17 @@
+service: "service.py:svc"
+include:
+  - "__init__.py"
+  - "service.py"
+  - "config.py"
+  - "configuration.yaml"
+python:
+  packages:
+    - torch==1.13.1
+    - torchvision==0.14.1
+    - pandas==1.5.3
+    - scikit-learn==1.2.2
+    - bentoml==1.0.16
+    - bentoctl==0.3.4 
+docker: 
+  distro: debian
+  cuda_version: "11.6.2"
